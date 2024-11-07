@@ -28,6 +28,8 @@ jobs:
         uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Install pylint
+        uses: pip install pylint
       - name: Pylint
         uses: poetry run pylint src
 
