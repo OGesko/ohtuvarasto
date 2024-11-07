@@ -29,8 +29,8 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Install pylint
-        uses: pip install pylint
+        run: pip install pylint
       - name: Pylint
-        uses: poetry run pylint src
+        run: poetry run pylint src
 
 
